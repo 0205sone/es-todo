@@ -26,7 +26,7 @@
 
 実際の操作画面
 
-<img width="1128" height="371" alt="スクリーンショット 2025-11-17 115438" src="https://github.com/user-attachments/assets/1641fa19-06ad-49f7-b2a7-242c030b7273" />
+<img width="916" height="980" alt="スクリーンショット 2025-11-17 115247" src="https://github.com/user-attachments/assets/e28c4173-c92e-41a1-894a-6f298faf03f1" />
 <img width="1128" height="371" alt="スクリーンショット 2025-11-17 115438" src="https://github.com/user-attachments/assets/85139615-214f-42df-8ee6-a00923065467" />
 <img width="1137" height="1216" alt="スクリーンショット 2025-11-17 115335" src="https://github.com/user-attachments/assets/048e85aa-8687-441f-a564-cefa6c2f20e1" />
 
