@@ -1,33 +1,27 @@
-{
-  "name": "esevent",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "homepage": "https://0205sone.github.io/es-event-app/",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import tailwindcss from "@tailwindcss/vite";
+import path from "path"; // ◀◀ 追加
+
+const repositoryName = "react-todo-app"; // ◀◀ 追加
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  // ▼▼ 追加 ここから ▼▼
+  base: process.env.NODE_ENV === "production" ? `/${repositoryName}/` : "/",
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+        404: path.resolve(__dirname, "404.html"),
+      },
+    },
   },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+  // ▲▲ 追加 ここまで ▲▲
+  server: {
+    port: 3000,
+    strictPort: false,
+    open: true,
   },
-  "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.3",
-    "eslint": "^9.13.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.14",
-    "gh-pages": "^6.2.0",
-    "globals": "^15.11.0",
-    "typescript": "~5.6.2",
-    "typescript-eslint": "^8.11.0",
-    "vite": "^5.4.10"
-  }
-}
+});

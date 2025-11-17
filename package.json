@@ -28,4 +28,13 @@
     "typescript-eslint": "^8.45.0",
     "vite": "^7.1.7"
   }
+  "homepage": "https://github.com/0205sone/es-todo",
+  "scripts": {
+   "dev": "vite",
+   "build": "tsc -b && vite build",
+   "lint": "eslint .",
+   "preview": "vite preview",
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d dist"
+  },
 }
