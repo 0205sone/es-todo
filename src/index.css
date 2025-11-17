@@ -1,0 +1,174 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap');
+
+:root {
+  --es-blue-main: #38b6ff;  /* ボタンなどのアクセント */
+  --es-text-main: #334455;  /* メインの文字色（濃いグレー紺） */
+  --es-text-sub: #667788;   /* サブの文字色 */
+  --es-bg-body: #f0f8ff;    /* 全体の背景（アリスブルー） */
+  --es-bg-card: #ffffff;    /* カードの背景（完全な白） */
+  --es-border: #bfe6ff;     /* 枠線の色 */
+}
+
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  background-color: var(--es-bg-body);
+  /* 薄い水色のドット柄 */
+  background-image: radial-gradient(#d0eaff 2px, transparent 2px);
+  background-size: 20px 20px;
+  color: var(--es-text-main);
+  margin: 0;
+  padding: 20px;
+}
+
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* タイトル */
+h3 {
+  color: #0077aa;
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-weight: 800;
+}
+
+/* 戻るボタン */
+button {
+  background: linear-gradient(45deg, #4fc3ff, #29a0e0);
+  color: white;
+  border: 2px solid white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(56, 182, 255, 0.3);
+  transition: transform 0.2s;
+}
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* --- 上部のステータスカード (薄い水色) --- */
+.status-card {
+  background-color: white;
+  background: linear-gradient(180deg, #e6f4ff 0%, #ffffff 100%);
+  border: 3px solid var(--es-blue-main);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: var(--es-text-main);
+  box-shadow: 0 5px 15px rgba(180, 200, 220, 0.3);
+}
+
+/* 強調する数字 */
+.highlight-num {
+  color: #0077aa; /* 濃い青 */
+  font-size: 1.2em;
+  font-weight: 800;
+}
+.highlight-accent {
+  color: #ff4081; /* ピンク */
+  font-weight: 800;
+}
+
+/* ライブ回数の目安エリア */
+.live-count-area {
+  background-color: #f7fbff;
+  border: 2px dashed #bfe6ff;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+/* --- 入力エリアなどの白いカード --- */
+.white-card {
+  background-color: var(--es-bg-card);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #e0f0ff; /* 薄い枠線 */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.white-card h4 {
+  margin-top: 0;
+  color: #0077aa;
+  border-bottom: 2px dashed #bfe6ff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* 入力フォーム */
+label {
+  display: block;
+  color: var(--es-text-main);
+  font-weight: bold;
+  font-size: 0.95em;
+  margin-bottom: 5px;
+}
+
+input, select {
+  background-color: #f9fdff;
+  border: 2px solid #cceeff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1em;
+  color: var(--es-text-main);
+  font-weight: bold;
+  width: 100%; /* 幅いっぱいに */
+  box-sizing: border-box; /* パディングを含める */
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: var(--es-blue-main);
+  background-color: white;
+}
+
+/* 枠線（fieldset） */
+fieldset {
+  border: 2px solid #d0eaff;
+  border-radius: 15px;
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+legend {
+  color: #0077aa;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+/* リストアイテム */
+.milestone-list {
+  list-style: none;
+  padding: 0;
+}
+
+.milestone-list li {
+  background: white;
+  border: 1px solid #e0efff;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  color: var(--es-text-main);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.milestone-list li:hover {
+  background-color: #f0f8ff;
+  border-color: var(--es-blue-main);
+}
+
+.milestone-list li.completed {
+  background-color: #e6f4ff;
+  color: #8899aa;
+  text-decoration: line-through;
+}
